@@ -4,7 +4,13 @@
   "description": "A dashboard for design analytic",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/main.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixser -b 'last 10 version' css/main.comp.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Guebre Adama",
   "license": "ISC",
