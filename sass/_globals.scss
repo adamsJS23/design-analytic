@@ -15,3 +15,33 @@ body {
   background-color: #1f2023;
   font-family: "Inter", sans-serif;
 }
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  font-family: "Inter", sans-serif;
+}
+
+li,
+p,
+a {
+  font-size: 1.6rem;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 38em) {
+  .hide-tablet {
+    display: none;
+  }
+}
