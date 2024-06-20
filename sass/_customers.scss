@@ -1,0 +1,35 @@
+.customers {
+  ul {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    color: #fff;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.customer__image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.customer__cta-icon {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  background-color: $secondary-color;
+  border-radius: 0.3rem;
+}
+
+.user-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
