@@ -86,3 +86,36 @@
     grid-column: 1/ span 2;
   }
 }
+
+@media only screen and (min-width:64em){
+
+  .col2{
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-gap: 3rem;
+  }
+
+  .main-area{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 15rem auto;
+  }
+
+  .extra-stats{
+    grid-column: 2/span 2;
+    align-self: center;
+    padding: 3.5rem;
+    border: 1.5px solid $secondary-color;
+  }
+
+  .extra-stats ul{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .extra-stats ul li strong{
+    margin-bottom: 1rem;
+  }
+
+  .earnings{
+    grid-column: 1/span 2;
+  }
+}
