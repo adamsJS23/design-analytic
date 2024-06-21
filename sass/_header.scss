@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem 0;
 }
 
 .user-img{
@@ -30,4 +31,19 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+@media only screen and (min-width:38em){
+  .signout{
+    display: block;
+    background-color: $secondary-color;
+    padding: .7rem 1.5rem;
+    border-radius: .5rem;
+  }
+
+  .header-right nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }
