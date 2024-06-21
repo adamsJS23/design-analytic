@@ -54,3 +54,36 @@
 .toggle-menu {
   transform: translateX(0);
 }
+
+@media only screen and (min-width:38em){
+
+  .btn-exit{
+    display: none;
+  }
+
+  .sidebar{
+    align-items: unset;
+    transform: unset;
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    position: inherit;
+    transition: unset;
+    background: unset;
+    background-color: $secondary-color;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav__link{
+    font-size: 1.8rem;
+  }
+
+}
