@@ -39,3 +39,13 @@
     grid-column: 1 / span 2;
   }
 }
+@media only screen and (min-width: 64em) {
+  .customers {
+    grid-column: 3;
+    align-self: end;
+  }
+
+  .customers ul{
+    grid-template-columns: 1fr;
+  }
+}
