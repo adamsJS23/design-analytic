@@ -1,4 +1,12 @@
 .customers {
+  @include for-screen-size(tablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @include for-screen-size(desktop) {
+    grid-column: 3;
+    align-self: end;
+  }
 
   .customer__list {
     display: grid;
@@ -6,6 +14,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     color: #fff;
+
+    @include for-screen-size(desktop){
+      grid-template-columns: 1fr;
+    }
 
     .customer {
       display: flex;
@@ -35,19 +47,3 @@
   gap: 1rem;
 }
 
-@media only screen and (min-width: 38em) {
-  .customers {
-    grid-column: 1 / span 2;
-  }
-}
-
-@media only screen and (min-width: 64em) {
-  .customers {
-    grid-column: 3;
-    align-self: end;
-  }
-
-  .customers .customer__list {
-    grid-template-columns: 1fr;
-  }
-}
