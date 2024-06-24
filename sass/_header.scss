@@ -1,47 +1,47 @@
-.primary{
+.primary {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
 }
 
-.user-img{
-  height: 3rem;
-  width: 3rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.logo{
+.logo {
   width: 13rem;
 }
 
-.btn-hamburger{
+.btn-hamburger {
   width: 4.2rem;
   cursor: pointer;
 }
 
-.header-right{
+.header-right {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.user-box{
+.user-box {
   display: flex;
   align-items: center;
   gap: 1rem;
+  
+  &__img {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
-@media only screen and (min-width:38em){
-  .signout{
+@media only screen and (min-width: 38em) {
+  .signout {
     display: block;
     background-color: $secondary-color;
-    padding: .7rem 1.5rem;
-    border-radius: .5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
   }
 
-  .header-right nav{
+  .header-right nav {
     display: flex;
     align-items: center;
     gap: 1rem;
