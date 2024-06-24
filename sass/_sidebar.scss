@@ -33,22 +33,24 @@
   height: 3rem;
 }
 
-.nav__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-.nav__item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  color: #fff;
-}
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #fff;
+  }
 
-.nav__link {
-  font-size: 2.6rem;
-  color: inherit;
+  &__link {
+    font-size: 2.6rem;
+    color: inherit;
+  }
 }
 
 .toggle-menu {
@@ -111,18 +113,16 @@
     &__heading {
       font-size: 1.6rem;
     }
-  
+
     &__text {
       font-size: 1.4rem;
       line-height: 1.6;
       color: #bbbfce;
     }
-  
+
     &__icon {
       width: 24px;
       height: 24px;
     }
   }
-
-  
 }
