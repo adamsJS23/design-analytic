@@ -1,0 +1,13 @@
+@mixin for-screen-size($breackpoint) {
+  @if ($breackpoint==tablet) {
+    @media only screen and (min-width: 38em) {
+      @content;
+    }
+  }
+
+  @if ($breackpoint==desktop) {
+    @media only screen and (min-width:64em) {
+      @content;
+    }
+  }
+}
