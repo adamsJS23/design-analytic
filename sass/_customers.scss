@@ -1,32 +1,31 @@
 .customers {
-  ul {
+
+  .customer__list {
     display: grid;
     margin-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     color: #fff;
 
-    li {
+    .customer {
       display: flex;
       justify-content: space-between;
+
+      &__image {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      &__cta-icon {
+        width: 48px;
+        height: 48px;
+        padding: 10px;
+        background-color: $secondary-color;
+        border-radius: 0.3rem;
+      }
     }
-  }
-}
-
-.customer {
-  &__image {
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  &__cta-icon {
-    width: 48px;
-    height: 48px;
-    padding: 10px;
-    background-color: $secondary-color;
-    border-radius: 0.3rem;
   }
 }
 
@@ -48,7 +47,7 @@
     align-self: end;
   }
 
-  .customers ul {
+  .customers .customer__list {
     grid-template-columns: 1fr;
   }
 }
