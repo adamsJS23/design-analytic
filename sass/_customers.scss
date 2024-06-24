@@ -13,19 +13,21 @@
   }
 }
 
-.customer__image {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+.customer {
+  &__image {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
-.customer__cta-icon {
-  width: 48px;
-  height: 48px;
-  padding: 10px;
-  background-color: $secondary-color;
-  border-radius: 0.3rem;
+  &__cta-icon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    background-color: $secondary-color;
+    border-radius: 0.3rem;
+  }
 }
 
 .user-left {
@@ -39,13 +41,14 @@
     grid-column: 1 / span 2;
   }
 }
+
 @media only screen and (min-width: 64em) {
   .customers {
     grid-column: 3;
     align-self: end;
   }
 
-  .customers ul{
+  .customers ul {
     grid-template-columns: 1fr;
   }
 }
