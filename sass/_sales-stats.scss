@@ -4,6 +4,10 @@
   color: #fff;
   border-radius: 1rem;
   margin-top: 2rem;
+
+  @include for-screen-size(desktop) {
+    margin-top: 0;
+  }
 }
 
 // SALES
@@ -39,9 +43,30 @@
 .extra-stats {
   padding: 3.8rem 2rem;
 
+  @include for-screen-size(tablet) {
+    padding: 0;
+  }
+
+  @include for-screen-size(desktop) {
+    grid-column: 2 / span 2;
+    align-self: center;
+    padding: 4.5rem;
+    border: 1.5px solid $secondary-color;
+  }
+
   ul {
     display: flex;
     justify-content: space-between;
+
+    @include for-screen-size(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @include for-screen-size(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     strong {
       font-size: 2.6rem;
@@ -51,11 +76,28 @@
   }
 }
 
+.extra-stats ul li strong {
+  @include for-screen-size(desktop) {
+    margin-bottom: 1rem;
+  }
+}
+
 // EARNING AND VISITORS
-.earnings h1 {
-  color: #fff;
-  font-size: 2.6rem;
-  margin-bottom: 1.5rem;
+
+.earnings {
+  @include for-screen-size(tablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @include for-screen-size(desktop) {
+    grid-column: 1 / span 2;
+  }
+
+  & h1 {
+    color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .chart-container {
@@ -64,62 +106,26 @@
   padding: 2.8rem 2rem;
 }
 
-@media only screen and (min-width: 38em) {
-  .main-area {
+.main-area {
+  @include for-screen-size(tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15rem repeat(2, auto);
     grid-gap: 3rem;
   }
 
-  .extra-stats {
-    padding: 0;
-  }
-
-  .extra-stats ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-  }
-
-  .earnings {
-    grid-column: 1 / span 2;
+  @include for-screen-size(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15rem auto;
   }
 }
 
-@media only screen and (min-width: 64em) {
-  .col2 {
+.col2 {
+  @include for-screen-size(desktop) {
     display: grid;
     grid-template-columns: 20rem 1fr;
     grid-gap: 3rem;
   }
-
-  .main-area {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15rem auto;
-  }
-
-  .sales,
-  .extra-stats {
-    margin-top: 0;
-  }
-
-  .extra-stats {
-    grid-column: 2 / span 2;
-    align-self: center;
-    padding: 4.5rem;
-    border: 1.5px solid $secondary-color;
-  }
-
-  .extra-stats ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .extra-stats ul li strong {
-    margin-bottom: 1rem;
-  }
-
-  .earnings {
-    grid-column: 1 / span 2;
-  }
 }
+
+
